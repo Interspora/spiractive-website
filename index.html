@@ -14,13 +14,13 @@
   <div class="wrap header-inner">
     <a class="wordmark" href="#top">SPIRACTIVE<span>Trading Intelligence</span></a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#problem">The Problem</a>
+      <a href="#how">How It Works</a>
       <a href="#testing">What We Test</a>
       <a href="#case-study">Case Study</a>
       <a href="#pricing">Pricing</a>
-      <a href="#sample-report">Sample Report</a>
+      <a href="sample-report.html">Sample Report</a>
       <a href="#faq">FAQ</a>
-      <a class="nav-cta" href="#intake">Audit My Strategy</a>
+      <a class="nav-cta" href="#pricing">Choose Your Audit</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">☰</button>
   </div>
@@ -31,19 +31,43 @@
   <div class="wrap">
     <p class="kicker">Independent strategy validation · Backtesting · Quantitative research</p>
     <h1>Does your trading strategy<br>survive reality?</h1>
-    <p class="hero-sub">We test trading strategies against realistic fees, slippage, unseen data,
-    walk-forward analysis, parameter sensitivity and cost stress — and we tell you exactly what we find,
-    including when the answer is no.</p>
+    <p class="hero-sub">We test your strategy against realistic costs, unseen data and changing market
+    conditions — then give you a clear written verdict before you risk real money.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#intake">AUDIT MY STRATEGY</a>
+      <a class="btn btn-primary" href="#pricing">CHOOSE YOUR AUDIT</a>
       <a class="btn btn-ghost" href="sample-report.html">VIEW SAMPLE REPORT</a>
     </div>
-    <p class="hero-note">Research and analytical services only. No investment advice. No custody of client funds.</p>
+    <p class="trust-line">Confidential strategy handling &nbsp;•&nbsp; No exchange access &nbsp;•&nbsp; No custody of funds &nbsp;•&nbsp; Operated by Interspora Investments LLC</p>
+    <p class="hero-note">Research and analytical services only. No investment advice.</p>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="grid-3 steps-grid">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h3>Submit your strategy</h3>
+        <p>Choose a package, pay securely, then complete the detailed intake.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h3>We independently test it</h3>
+        <p>Realistic costs, unseen data, walk-forward analysis, parameter sensitivity and cost stress.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <h3>Receive your report and verdict</h3>
+        <p>A written, evidence-based report — including “no edge found” when that is the truth.</p>
+      </div>
+    </div>
+    <p class="steps-note">Typical delivery: 3–5 business days.</p>
   </div>
 </section>
 
 <!-- ============ PROBLEM ============ -->
-<section class="section" id="problem">
+<section class="section section-alt" id="problem">
   <div class="wrap">
     <h2>The problem</h2>
     <p class="lede">Most backtests look good until realistic costs, different market regimes and unseen data are introduced.</p>
@@ -65,7 +89,7 @@
 </section>
 
 <!-- ============ WHAT WE TEST ============ -->
-<section class="section section-alt" id="testing">
+<section class="section" id="testing">
   <div class="wrap">
     <h2>What we test</h2>
     <p class="lede">Every engagement runs your strategy through the same validation battery we use on our own research.</p>
@@ -81,9 +105,9 @@
 </section>
 
 <!-- ============ CASE STUDY ============ -->
-<section class="section" id="case-study">
+<section class="section section-alt" id="case-study">
   <div class="wrap">
-    <h2>Real case study — our own strategy</h2>
+    <h2>How testing prevented a bad deployment</h2>
     <p class="lede">We ran our in-house BTC/ETH trend strategy through the full battery on two years of real market data
     (Nov 2024 – Nov 2026, 4-hour candles, 4,375 candles per symbol).</p>
     <div class="case-grid">
@@ -103,15 +127,17 @@
     </div>
     <div class="verdict-box">
       <h3>Verdict: no robust, repeatable edge.</h3>
-      <p>The system rejected <em>our own</em> strategy rather than producing a flattering result.
-      That is exactly what the system is supposed to do — and it is the standard your strategy will be held to.</p>
+      <p>A strategy that appeared to earn +6.9% became negative after realistic costs and failed walk-forward
+      testing. The engine did exactly what it was built to do: prevent a misleading backtest from becoming a
+      real-money mistake.</p>
+      <p>That is the standard your strategy will be held to.</p>
     </div>
     <p class="section-cta"><a class="btn btn-ghost" href="sample-report.html">VIEW THE FULL SAMPLE REPORT</a></p>
   </div>
 </section>
 
 <!-- ============ WHAT CLIENTS RECEIVE ============ -->
-<section class="section section-alt" id="deliverables">
+<section class="section" id="deliverables">
   <div class="wrap">
     <h2>What you receive</h2>
     <p class="lede">A written, evidence-based report — not a dashboard screenshot.</p>
@@ -128,10 +154,11 @@
 </section>
 
 <!-- ============ PRICING ============ -->
-<section class="section" id="pricing">
+<section class="section section-alt" id="pricing">
   <div class="wrap">
     <h2>Pricing</h2>
     <p class="lede">Fixed fees, defined deliverables, no subscriptions.</p>
+    <p class="flow-note">Choose a package → Pay securely → Complete the detailed intake</p>
     <div class="grid-3 pricing-grid">
       <div class="card price-card">
         <h3>Strategy Reality Check</h3>
@@ -176,84 +203,44 @@
         <a class="btn btn-primary btn-pay" href="#" data-tier="full-quant-validation" data-payment="PLACEHOLDER_STRIPE_LINK_599">ORDER NOW</a>
       </div>
     </div>
-    <p class="payment-note" id="paymentNote">Secure checkout by Stripe. Buttons activate when payment links are connected at launch.</p>
+    <p class="trust-line trust-line-dark">Confidential strategy handling &nbsp;•&nbsp; No exchange access &nbsp;•&nbsp; No custody of funds &nbsp;•&nbsp; Operated by Interspora Investments LLC</p>
+    <p class="payment-note" id="paymentNote">Secure checkout. Buttons activate when payment links are connected at launch.</p>
   </div>
 </section>
 
-<!-- ============ INTAKE ============ -->
-<section class="section section-alt" id="intake">
+<!-- ============ QUICK INTAKE ============ -->
+<section class="section" id="intake">
   <div class="wrap">
-    <h2>Strategy intake</h2>
-    <p class="lede">After payment, this is all we need. Every field has a purpose; nothing is resold or shared.</p>
-    <!--
-      TODO(Floyd): point this form at your intake endpoint.
-      Option A (recommended tonight): create a free Tally/Typeform form and set action to its URL, or embed it here.
-      Option B: set data-form-endpoint on this form to any HTTPS endpoint that accepts POST (e.g. Formspree).
-      Until then, submissions fall back to opening a pre-filled email to you.
-    -->
-    <form id="intakeForm" class="intake-form" data-form-endpoint="" novalidate>
+    <h2>Start your audit</h2>
+    <p class="lede">Tell us the essentials. After payment you will complete the full technical intake.</p>
+    <form id="quickIntake" class="intake-form" data-intake-form data-form-endpoint="" novalidate>
       <div class="form-row">
         <label>Name<input type="text" name="name" required autocomplete="name"></label>
         <label>Email<input type="email" name="email" required autocomplete="email"></label>
-      </div>
-      <div class="form-row">
-        <label>Strategy name<input type="text" name="strategy_name" required></label>
-        <label>Trading venue<input type="text" name="venue" placeholder="e.g. Coinbase, Binance, IBKR"></label>
-      </div>
-      <div class="form-row">
         <label>Market
           <select name="market">
             <option>BTC</option><option>ETH</option><option>Other crypto</option>
             <option>Equities</option><option>FX</option><option>Futures</option><option>Other</option>
           </select>
         </label>
-        <label>Timeframe
-          <select name="timeframe">
-            <option>5m</option><option>15m</option><option>1h</option>
-            <option selected>4h</option><option>1d</option><option>Other</option>
-          </select>
-        </label>
-        <label>Assumed fees (if known)<input type="text" name="fees" placeholder="e.g. 0.1% taker"></label>
       </div>
-      <label>Strategy rules — overview<textarea name="rules" rows="3" required placeholder="Describe the strategy in your own words"></textarea></label>
-      <div class="form-row">
-        <label>Entry conditions<textarea name="entry" rows="3" required></textarea></label>
-        <label>Exit conditions<textarea name="exit" rows="3" required></textarea></label>
-      </div>
-      <div class="form-row">
-        <label>Stop-loss rules<textarea name="stop" rows="2"></textarea></label>
-        <label>Take-profit rules<textarea name="take_profit" rows="2"></textarea></label>
-        <label>Position-sizing rules<textarea name="sizing" rows="2"></textarea></label>
-      </div>
-      <label>Strategy file — Pine Script / Python / other (paste a link or describe; file handoff arranged by email after intake)
+      <label>Brief strategy description<textarea name="description" rows="4" required placeholder="What does it trade, and when does it enter and exit?"></textarea></label>
+      <label>Strategy file — optional (Pine Script / Python link or notes)
         <input type="text" name="strategy_file" placeholder="Link or notes">
       </label>
-      <fieldset class="form-fieldset">
-        <legend>What do you want tested?</legend>
-        <label class="check"><input type="checkbox" name="objective" value="profitability" checked> Profitability</label>
-        <label class="check"><input type="checkbox" name="objective" value="robustness" checked> Robustness</label>
-        <label class="check"><input type="checkbox" name="objective" value="overfitting" checked> Overfitting</label>
-        <label class="check"><input type="checkbox" name="objective" value="cost-sensitivity"> Cost sensitivity</label>
-        <label class="check"><input type="checkbox" name="objective" value="drawdown"> Drawdown</label>
-        <label class="check"><input type="checkbox" name="objective" value="walk-forward"> Walk-forward</label>
-      </fieldset>
-      <label class="check check-auth">
-        <input type="checkbox" name="authorization" required>
-        I confirm this strategy is mine or I am authorized to submit it for analysis.
-      </label>
-      <button class="btn btn-primary" type="submit">SUBMIT STRATEGY</button>
-      <p class="form-note" id="formNote"></p>
+      <button class="btn btn-primary" type="submit">GET STARTED</button>
+      <p class="form-note" data-form-note></p>
     </form>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="section" id="faq">
+<section class="section section-alt" id="faq">
   <div class="wrap">
     <h2>FAQ</h2>
     <details class="faq-item"><summary>Is this investment advice?</summary><p>No. We provide research and analytical services only: we measure how a defined strategy behaved under realistic historical conditions. We do not recommend trades, manage money, or hold client funds.</p></details>
     <details class="faq-item"><summary>Will you tell me my strategy is good if it isn't?</summary><p>No. The service exists because most backtests flatter. If the evidence says there is no robust edge, the report says so — as it did for our own strategy in the case study above.</p></details>
-    <details class="faq-item"><summary>What do you need from me?</summary><p>Only what the intake form asks: the strategy rules, market, timeframe, and your testing objectives. Strategy files (Pine Script, Python) help but a precise written specification is enough to start.</p></details>
+    <details class="faq-item"><summary>What do you need from me?</summary><p>To start: the essentials in the short form above. After payment you complete the full technical intake — precise rules, entry/exit conditions, stops, sizing. A strategy file (Pine Script, Python) helps but a precise written specification is enough.</p></details>
     <details class="faq-item"><summary>Is my strategy kept confidential?</summary><p>Yes. Submissions are used solely to perform the analysis you ordered and are never shared, resold, or traded against.</p></details>
     <details class="faq-item"><summary>How long does a report take?</summary><p>Typically 3–5 business days per strategy, depending on data availability for your market and timeframe.</p></details>
     <details class="faq-item"><summary>What markets do you cover?</summary><p>BTC and ETH are covered natively with two independent data providers. Other liquid crypto pairs, equities, FX and futures can be accommodated subject to data availability — ask before ordering if unsure.</p></details>
@@ -261,7 +248,7 @@
 </section>
 
 <!-- ============ DISCLAIMER ============ -->
-<section class="section section-alt" id="disclaimer">
+<section class="section" id="disclaimer">
   <div class="wrap">
     <h2>Disclaimer &amp; terms</h2>
     <div class="disclaimer-box">
@@ -286,8 +273,7 @@
     </div>
     <div class="footer-contact">
       <p>Contact</p>
-      <!-- TODO(Floyd): replace with your public contact address -->
-      <a href="mailto:hello@spiractive.example">hello@spiractive.example</a>
+      <a href="mailto:hello@spiractive.com">hello@spiractive.com</a>
     </div>
   </div>
   <div class="wrap footer-legal">

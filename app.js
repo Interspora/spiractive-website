@@ -9,8 +9,8 @@
     "robustness-audit": "",     // $349 — Robustness Audit
     "full-quant-validation": "" // $599 — Full Quant Validation
   };
-  // TODO(Floyd): intake inbox used by the email fallback until a form endpoint exists.
-  var INTAKE_EMAIL = "hello@spiractive.example";
+  // Intake inbox used by the email fallback until a form endpoint exists.
+  var INTAKE_EMAIL = "hello@spiractive.com";
   // --------------------------------------------------------------------------
 
   // mobile nav
@@ -39,8 +39,8 @@
       btn.addEventListener("click", function (e) {
         e.preventDefault();
         if (note) {
-          note.textContent = "Checkout activates at launch — the Stripe payment link for this tier has not been connected yet. " +
-            "You can still submit the intake form below and we will invoice you.";
+          note.textContent = "Checkout activates at launch — the payment link for this tier has not been connected yet. " +
+            "You can still get started below and we will invoice you.";
           note.style.color = "#b91c1c";
         }
         var intake = document.getElementById("intake");
@@ -49,45 +49,51 @@
     }
   });
 
-  // intake form: POST to configured endpoint, else fall back to a pre-filled email draft
-  var form = document.getElementById("intakeForm");
-  if (!form) return;
-  var formNote = document.getElementById("formNote");
+  // intake forms (quick homepage form + full technical intake): POST to a configured
+  // endpoint, else fall back to a pre-filled email draft
+  document.querySelectorAll("[data-intake-form]").forEach(function (form) {
+    var formNote = form.querySelector("[data-form-note]");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      var data = new FormData(form);
+      var endpoint = form.getAttribute("data-form-endpoint") || "";
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (!form.reportValidity()) return;
-    var data = new FormData(form);
-    var endpoint = form.getAttribute("data-form-endpoint") || "";
+      var lines = [];
+      data.forEach(function (value, key) {
+        if (key === "objective") return;
+        lines.push(key.replace(/_/g, " ") + ": " + value);
+      });
+      var objectives = data.getAll("objective");
+      if (objectives.length) lines.push("testing objectives: " + objectives.join(", "));
+      var body = lines.join("\n");
 
-    var lines = [];
-    data.forEach(function (value, key) {
-      if (key === "objective") return;
-      lines.push(key.replace(/_/g, " ") + ": " + value);
-    });
-    var objectives = data.getAll("objective").join(", ");
-    lines.push("testing objectives: " + objectives);
-    var body = lines.join("\n");
-
-    if (endpoint) {
-      fetch(endpoint, { method: "POST", body: data })
-        .then(function (r) {
-          if (!r.ok) throw new Error("HTTP " + r.status);
-          form.reset();
-          formNote.textContent = "Received. We reply within one business day with next steps and your payment confirmation.";
+      if (endpoint) {
+        fetch(endpoint, { method: "POST", body: data })
+          .then(function (r) {
+            if (!r.ok) throw new Error("HTTP " + r.status);
+            form.reset();
+            if (formNote) {
+              formNote.textContent = "Received. We reply within one business day with next steps.";
+              formNote.className = "form-note ok";
+            }
+          })
+          .catch(function () {
+            if (formNote) {
+              formNote.textContent = "Submission failed — please email this brief to " + INTAKE_EMAIL + " instead.";
+              formNote.className = "form-note err";
+            }
+          });
+      } else {
+        var subject = "Strategy intake — " + (data.get("strategy_name") || data.get("name") || "new client");
+        window.location.href = "mailto:" + INTAKE_EMAIL +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+        if (formNote) {
+          formNote.textContent = "Your email app opened with the brief pre-filled — just press send.";
           formNote.className = "form-note ok";
-        })
-        .catch(function () {
-          formNote.textContent = "Submission failed — please email this brief to " + INTAKE_EMAIL + " instead.";
-          formNote.className = "form-note err";
-        });
-    } else {
-      var subject = "Strategy intake — " + (data.get("strategy_name") || "unnamed");
-      window.location.href = "mailto:" + INTAKE_EMAIL +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-      formNote.textContent = "No intake endpoint is connected yet, so your email app opened with the brief pre-filled — just press send.";
-      formNote.className = "form-note ok";
-    }
+        }
+      }
+    });
   });
 })();

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategy Intake — SPIRACTIVE Trading Intelligence</title>
+<meta name="description" content="Detailed strategy intake for your Spiractive validation engagement.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="index.html">SPIRACTIVE<span>Trading Intelligence</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html#pricing">Pricing</a>
+      <a href="sample-report.html">Sample Report</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" id="intake">
+  <div class="wrap">
+    <h2>Strategy intake — full technical brief</h2>
+    <p class="lede">Complete this after payment. Every field has a purpose; the more precise the specification,
+    the more precise the measurement. Nothing you submit is shared, resold, or traded against.</p>
+    <!--
+      TODO(Floyd): point this form at your intake endpoint (Tally/Typeform/Formspree URL
+      in data-form-endpoint), or leave empty for the email fallback.
+    -->
+    <form id="fullIntake" class="intake-form" data-intake-form data-form-endpoint="" novalidate>
+      <div class="form-row">
+        <label>Name<input type="text" name="name" required autocomplete="name"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <div class="form-row">
+        <label>Strategy name<input type="text" name="strategy_name" required></label>
+        <label>Trading venue<input type="text" name="venue" placeholder="e.g. Coinbase, Binance, IBKR"></label>
+      </div>
+      <div class="form-row">
+        <label>Market
+          <select name="market">
+            <option>BTC</option><option>ETH</option><option>Other crypto</option>
+            <option>Equities</option><option>FX</option><option>Futures</option><option>Other</option>
+          </select>
+        </label>
+        <label>Timeframe
+          <select name="timeframe">
+            <option>5m</option><option>15m</option><option>1h</option>
+            <option selected>4h</option><option>1d</option><option>Other</option>
+          </select>
+        </label>
+        <label>Assumed fees (if known)<input type="text" name="fees" placeholder="e.g. 0.1% taker"></label>
+      </div>
+      <label>Strategy rules — overview<textarea name="rules" rows="3" required placeholder="Describe the strategy in your own words"></textarea></label>
+      <div class="form-row">
+        <label>Entry conditions<textarea name="entry" rows="3" required></textarea></label>
+        <label>Exit conditions<textarea name="exit" rows="3" required></textarea></label>
+      </div>
+      <div class="form-row">
+        <label>Stop-loss rules<textarea name="stop" rows="2"></textarea></label>
+        <label>Take-profit rules<textarea name="take_profit" rows="2"></textarea></label>
+        <label>Position-sizing rules<textarea name="sizing" rows="2"></textarea></label>
+      </div>
+      <label>Strategy file — Pine Script / Python / other (paste a link or describe; file handoff arranged by email after intake)
+        <input type="text" name="strategy_file" placeholder="Link or notes">
+      </label>
+      <fieldset class="form-fieldset">
+        <legend>What do you want tested?</legend>
+        <label class="check"><input type="checkbox" name="objective" value="profitability" checked> Profitability</label>
+        <label class="check"><input type="checkbox" name="objective" value="robustness" checked> Robustness</label>
+        <label class="check"><input type="checkbox" name="objective" value="overfitting" checked> Overfitting</label>
+        <label class="check"><input type="checkbox" name="objective" value="cost-sensitivity"> Cost sensitivity</label>
+        <label class="check"><input type="checkbox" name="objective" value="drawdown"> Drawdown</label>
+        <label class="check"><input type="checkbox" name="objective" value="walk-forward"> Walk-forward</label>
+      </fieldset>
+      <label class="check check-auth">
+        <input type="checkbox" name="authorization" required>
+        I confirm this strategy is mine or I am authorized to submit it for analysis.
+      </label>
+      <button class="btn btn-primary" type="submit">SUBMIT STRATEGY</button>
+      <p class="form-note" data-form-note></p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-legal">
+    <p>© 2026 Spiractive Trading Intelligence · Operated by Interspora Investments LLC · Research and analytical services only · No investment advice · No custody of client funds</p>
+    <p><a href="terms.html" style="color:#9aa3af">Terms of Service</a> · <a href="privacy.html" style="color:#9aa3af">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -150,11 +150,29 @@ h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; letter-spacing: -.01
   body { background: #fff; }
 }
 
+/* steps (how it works) */
+.steps-grid { text-align: left; }
+.step { padding: 6px 18px 6px 0; }
+.step-num { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px;
+  border: 1.5px solid var(--accent); color: var(--accent); border-radius: 50%;
+  font-family: var(--mono); font-weight: 700; font-size: 15px; margin-bottom: 14px; }
+.step h3 { font-size: 16px; margin-bottom: 6px; }
+.step p { font-size: 14.5px; color: var(--ink-2); }
+.steps-note { margin-top: 30px; font-size: 13.5px; font-weight: 600; letter-spacing: .06em; color: var(--ink-3); text-transform: uppercase; }
+
+/* trust line */
+.trust-line { font-size: 12.5px; letter-spacing: .04em; color: #a9b2bd; margin-bottom: 10px; }
+.trust-line-dark { color: var(--ink-3); margin-top: 26px; margin-bottom: 0; }
+.flow-note { font-family: var(--mono); font-size: 13.5px; color: var(--ink-2); margin: -24px 0 28px; }
+
 /* responsive */
 @media (max-width: 860px) {
   body { overflow-x: hidden; }
   .hero h1 { font-size: clamp(27px, 8.2vw, 40px); overflow-wrap: break-word; }
   .kicker { font-size: 10.5px; letter-spacing: .14em; }
+  .card p { font-size: 15px; }
+  .price-card li { font-size: 15px; }
+  .intake-form label { font-size: 14px; }
   .grid-3 { grid-template-columns: 1fr; }
   .checklist { grid-template-columns: 1fr; }
   .case-arrow { display: none; }

@@ -1,0 +1,9 @@
+{
+  "name": "spiractive-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Spiractive Trading Intelligence — public storefront (static site, no build step)",
+  "scripts": {
+    "dev": "python3 -m http.server"
+  }
+}

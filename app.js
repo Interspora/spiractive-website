@@ -10,7 +10,7 @@
     "full-quant-validation": "" // $599 — Full Quant Validation
   };
   // Intake inbox used by the email fallback until a form endpoint exists.
-  var INTAKE_EMAIL = "hello@spiractive.com";
+  var INTAKE_EMAIL = "hello@spiractivetrade.com";
   // --------------------------------------------------------------------------
 
   // mobile nav

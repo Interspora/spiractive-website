@@ -28,7 +28,7 @@ python3 -m http.server 8080
 
 ## Wiring money and intake (the only two integrations)
 
-1. **Stripe Payment Links** — create three links in the Stripe dashboard ($199 / $349 / $599), then either:
+1. **Stripe Payment Links** — create three links in the Stripe dashboard ($99 / $129 / $169 (founding-year)), then either:
    - paste them into `PAYMENT_LINKS` at the top of `app.js`, **or**
    - set each pricing button's `href` in `index.html` directly.
    Until then the buttons are inert and say so — they never fake a checkout.

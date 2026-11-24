@@ -4,7 +4,7 @@ The site is code-complete. These are the business-side items that must come from
 
 ## Must provide (site will not transact without these)
 
-1. **Three Stripe Payment Links** — $199 / $349 / $599 (Stripe dashboard → Payment Links). Paste into `app.js` → `PAYMENT_LINKS`, or directly into the three `btn-pay` hrefs in `index.html`.
+1. **Three Stripe Payment Links** — $99 / $129 / $169 (founding-year) (Stripe dashboard → Payment Links). Paste into `app.js` → `PAYMENT_LINKS`, or directly into the three `btn-pay` hrefs in `index.html`.
 2. **Public contact email** — replace `hello@spiractive.example` in `index.html` (footer) and `app.js` (`INTAKE_EMAIL`).
 3. **Intake destination** — Tally/Typeform/Formspree URL set as `data-form-endpoint` on `#intakeForm`, or accept the email fallback.
 4. **Domain + hosting** — upload the folder to Hostinger (or any static host) and point the domain.

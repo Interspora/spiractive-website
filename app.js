@@ -5,9 +5,9 @@
   // ---- CONFIGURE AT LAUNCH -------------------------------------------------
   // TODO(Floyd): paste your three payment links (Stripe or Gumroad) here. Buttons stay inert until you do.
   var PAYMENT_LINKS = {
-    "reality-check": "",        // $99 — Strategy Reality Check (founding-client price)
-    "robustness-audit": "",     // $199 — Robustness Audit (founding-client price)
-    "full-quant-validation": "" // $329 — Full Quant Validation (founding-client price)
+    "reality-check": "https://buy.stripe.com/4gM28r79Ybzt9dVawL4Ni00",        // $99 — Strategy Reality Check (founding-client price)
+    "robustness-audit": "https://buy.stripe.com/28E7sLcui6f93TB9sH4Ni01",     // $199 — Robustness Audit (founding-client price)
+    "full-quant-validation": "https://buy.stripe.com/dRmcN53XM0UPgGn20f4Ni02" // $329 — Full Quant Validation (founding-client price)
   };
   // Intake inbox used by the email fallback until a form endpoint exists.
   var INTAKE_EMAIL = "hello@spiractivetrade.com";
